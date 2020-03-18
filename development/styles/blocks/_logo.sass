@@ -1,0 +1,18 @@
+// Helpers
+@import '../helpers/variables'
+@import '../helpers/mixins'
+
+.logo
+    display: block
+    margin: 0 auto
+    @include breakpoint(m)
+        width: calc(100% / 3 - 20px)
+    img
+        width: 81px
+        height: 53px
+        @include breakpoint(m)
+            display: block
+            margin: 0 auto
+        @include breakpoint(l)
+            width: 99px
+            height: 65px

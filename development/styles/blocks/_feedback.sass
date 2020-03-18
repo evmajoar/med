@@ -1,0 +1,107 @@
+// Helpers
+@import '../helpers/variables'
+@import '../helpers/mixins'
+
+.feedback
+    .container
+        padding: 30px 0 0
+        @include breakpoint(m)
+            background: url($imageDir + 'honey2.jpg') 105% top / 187px 345px no-repeat
+        @include breakpoint(l)
+            background-position-x: 100%
+            background-size: 272px 504px  
+            padding-top: 40px 
+
+    &__desc
+        font-size: 12px
+        letter-spacing: .06px
+        text-align: center
+        margin-top: 5px
+        width: 100%
+        line-height: 16px
+        strong
+            font-weight: 800
+            color: $yellow
+            display: block
+        @include breakpoint(m)
+            font-size: 15px
+            line-height: 21px
+            letter-spacing: .07px
+            margin-top: 10px  
+        @include breakpoint(l)
+            font-size: 19px
+            line-height: 24px
+            letter-spacing: .1px
+            margin-top: 14px        
+
+    &__form
+        width: 100%
+        margin-top: 25px
+        position: relative
+        padding-bottom: 200px
+        border-bottom: 1px solid #ececee
+        &::after
+            @include pseudo()
+            bottom: 0
+            width: 211px
+            height: 181px
+            left: calc(50% - 90px)
+            background: url($imageDir + 'honey1.jpg') center / 211px 181px no-repeat
+            @include breakpoint(m)
+                left: -20px
+            @include breakpoint(l) 
+                width: 328px
+                height: 227px
+                background-size: 328px 227px  
+                left: 0 
+        @include breakpoint(m)
+            padding-bottom: 55px
+        @include breakpoint(l)
+            padding-bottom: 100px  
+            margin-top: 35px         
+
+    &__group
+        width: calc(100% - 50px)
+        margin: 0 auto
+        @include breakpoint(m)
+           width: calc(100% - 400px)
+        @include breakpoint(l)
+           width: calc(100% - 720px)     
+
+    &__input
+        width: 100%
+        border: 0
+        border-bottom: 1px solid #e8e8e8
+        text-transform: uppercase
+        color: #c7c7c7
+        height: 30px
+        margin-bottom: 28px
+        font-size: 11px
+        line-height: 30px
+        font-weight: 300
+        text-transform: uppercase
+        letter-spacing: .06px
+        text-align: center
+        padding: 5px 20px
+        @include placeholder
+            color: #8e8e8e
+        @include placeholderHidden
+        @include breakpoint(m)
+            font-size: 12px
+            height: 36px
+            line-height: 36px
+        &.error
+            border-bottom-color: $red !important
+            color: $red
+            @include placeholder
+                color: $red
+
+    label.error
+        display: none !important       
+
+
+    &__submit
+        display: block
+        margin: 0 auto
+        @include breakpoint(m)     
+            margin-top: 12px    

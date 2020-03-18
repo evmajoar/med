@@ -1,0 +1,111 @@
+// Helpers
+@import '../helpers/variables'
+@import '../helpers/mixins'
+
+.products
+    padding: 35px 0 27px
+    @include breakpoint(l)
+        padding: 60px 0 68px
+
+    &__list
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: stretch
+        margin-top: 25px
+        @include breakpoint(m)
+            margin-top: 70px
+        @include breakpoint(l)
+            max-width: 1005px
+            margin: 36px auto 0
+
+    &__item
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: stretch
+        width: calc(100% / 2 - 10px)
+        background: $white
+        box-shadow: $prodShadow
+        margin-bottom: 20px
+        padding: 25px 14px
+        @include breakpoint(m)
+            width: calc(100% / 3 - 20px)
+            padding: 40px
+        @include breakpoint(l)
+            width: calc(100% / 3 - 42px)
+            padding: 51px 59px 58px
+            margin-bottom: 50px
+
+    &__subtitle
+        text-align: center
+        font:
+            size: 14px
+            weight: 700
+        letter-spacing: .07px
+        margin-top: 19px
+        width: 100%
+        strong
+            display: block
+            font-weight: 700
+        @include breakpoint(m)
+            font-size: 17px
+            letter-spacing: .09px
+            margin-top: 23px
+        @include breakpoint(l)
+            font-size: 20px
+            letter-spacing: .1px
+            margin-top: 29px
+
+    &__text
+        font:
+            size: 12px
+        letter-spacing: .06px
+        text-align: center
+        margin-top: 5px
+        width: 100%
+        &--red
+            color: $red
+        @include breakpoint(m)
+            font-size: 13px
+            letter-spacing: .07px
+        @include breakpoint(l)
+            font-size: 15px
+            margin-top: 10px
+
+    &__figure
+        order: -1
+        width: 100%
+        img
+            display: block
+            margin: 0 auto
+            width: 95px
+            height: 82px
+            @include breakpoint(m)
+                width: 137px
+                height: 118px
+            @include breakpoint(l)
+                width: 174px
+                height: 149px
+        &--thumb
+            img
+                width: 82px
+                height: 81px
+                @include breakpoint(m)
+                    width: 122px
+                    height: 120px
+                @include breakpoint(l)
+                    width: 139px
+                    height: 136px                
+
+    &__button
+        margin-top: 11px
+        display: inline-block
+        font-size: 12px
+        letter-spacing: .06px
+        @include breakpoint(m)
+            font-size: 15px
+            letter-spacing: .07px
+        @include breakpoint(l)
+            font-size: 15px
+            margin-top: 18px

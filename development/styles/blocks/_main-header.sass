@@ -1,0 +1,20 @@
+// Helpers
+@import '../helpers/variables'
+@import '../helpers/mixins'
+
+.main-header
+    display: flex
+    flex-direction: column
+    padding-top: 28px
+    background: $black2 url($imageDir + 'header-bg.jpg') center / 768px 440px no-repeat
+    position: relative
+    overflow-y: hidden
+    height: 440px
+    @include breakpoint(m)
+        background-size: 1200px 600px
+        height: 600px
+    @include breakpoint(l)
+        background-size: 1920px 750px
+        height: 750px
+    .container
+        justify-content: space-between

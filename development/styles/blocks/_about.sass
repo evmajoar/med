@@ -1,0 +1,116 @@
+// Helpers
+@import '../helpers/variables'
+@import '../helpers/mixins'
+
+.about
+    background: #f1f2f4 url($imageDir + 'about-bg.jpg') center / 1920px 700px no-repeat
+    padding: 41px 0 37px
+    @include breakpoint(m)
+        padding: 60px 0 58px
+        .container
+            flex-direction: column
+            align-items: flex-start
+    @include breakpoint(l)
+        padding: 102px 0
+
+    &__title
+        font-size: 22px
+        padding-top: 0
+        margin-bottom: 3px
+        &::after
+            display: none
+        @include breakpoint(m)
+            font-size: 25px
+            letter-spacing: .13px
+            text-align: left
+        @include breakpoint(l)
+            font-size: 30px
+            letter-spacing: .15px
+
+    &__list
+        display: flex
+        align-items: stretch
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: 27px
+        @include breakpoint(m)
+            max-width: 768px
+            width: 100%
+            font-size: 35px
+            justify-content: flex-start
+
+    &__item
+        width: calc(100% / 2 - 15px)
+        font-size: 12px
+        letter-spacing: 0.06px
+        line-height: 20px
+        font-weight: 300
+        margin-bottom: 27px
+        position: relative
+        padding-top: 27px
+        @include breakpoint(m)
+            width: calc(100% / 2 - 55px)
+            font-size: 15px
+            line-height: 27px
+            margin-bottom: 23px
+            padding-top: 40px
+            padding-right: 73px
+            max-width: 328px
+            &:nth-child(odd)
+                margin-right: 43px
+        @include breakpoint(m)
+            margin-bottom: 35px
+        &::before
+            @include pseudo()
+            top: 0
+            left: 0
+            width: 23px
+            height: 23px
+            background: url($imageDir + 'sprites.png') no-repeat
+            @include breakpoint(m)
+                height: 25px
+                width: 25px
+        strong
+            display: block
+            font-size: 15px
+            letter-spacing: .07px
+            font-weight: 700
+            @include breakpoint(m)
+                font-size: 20px
+                letter-spacing: .1px
+
+        &--icon-car
+            &::before
+                height: 18px
+                background-position: -50px -55px
+                @include breakpoint(m)
+                    width: 33px
+                    height: 26px
+                    background-position: -1px -1px
+        &--icon-lab
+            &::before
+                height: 18px
+                background-position: -95px -1px
+                @include breakpoint(m)
+                    width: 32px
+                    height: 26px
+                    background-position: -36px -1px
+        &--icon-smudge
+           &::before
+               background-position: -70px -1px
+               @include breakpoint(m)
+                   background-position: -1px -28px
+        &--icon-certificate
+            &::before
+                background-position: -70px -26px
+                @include breakpoint(m)
+                    background-position: -28px -28px
+
+    &__link
+        display: inline
+
+    &__button
+        margin: 0 auto
+        @include breakpoint(m)
+            margin: 20px 0 0
+            min-width: 230px

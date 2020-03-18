@@ -1,0 +1,220 @@
+// Helpers
+@import '../helpers/variables'
+@import '../helpers/mixins'
+
+.modal
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    padding: $gutter
+    z-index: 10
+    transform: translate3d(0, -100%, 0)
+    transition: transform .3s ease
+    &--slide-down
+       transform: translate3d(0, 0, 0)
+
+.modal-form
+    display: none
+    width: 100%
+    max-width: 290px
+    max-height: 407px
+    overflow-x: hidden
+    height: 100%
+    padding: 44px 31px 33px
+    position: relative
+    z-index: 12
+    background: url($imageDir + 'modal-decor-top.jpg') left top no-repeat, url($imageDir + 'modal-decor-bottom.jpg') right bottom no-repeat
+    background-color: $white
+    @include breakpoint(m)
+        max-width: 390px
+        padding-left: 35px
+        padding-right: 35px
+        max-height: 416px  
+    &--show
+        display: block     
+
+    &__title
+        padding-top: 0
+        &::after
+            display: none
+
+    &__text
+        margin-top: 8px
+        text-align: center
+        font:
+            size: 14px
+            weight: 300 
+        letter-spacing: .14px  
+
+    &__form
+        margin-top: 15px
+        width: 100%
+        text-align: center
+
+    &__group
+        width: 100%
+        &:not(:last-of-type)
+            margin-bottom: 10px    
+
+    &__input
+        height: 50px
+        line-height: 50px
+        padding: 20px
+        font: 
+            size: 13px
+            weight: 300
+        letter-spacing: .13px
+        color: $black
+        border: 1px solid #f4f4f4    
+        width: 100%   
+        @include placeholder
+            color: $black
+        @include placeholderHidden 
+        &.error
+            border-color: $red !important
+            color: $red
+            @include placeholder
+                color: $red
+
+    label.error
+        display: none !important            
+
+    &__submit
+        margin-top: 21px   
+
+    &__close
+        width: 14px 
+        height: 14px
+        top: 13px
+        right: 14px 
+        &::after, &::before
+            @include pseudo()
+            top: 5px
+            right: 1px 
+            width: 14px 
+            height: 2px 
+            border-radius: 2px
+            background: $black2 
+        &::before
+            transform: rotate(45deg) 
+        &::after
+            transform: rotate(-45deg)  
+
+.modal-product
+    display: none
+    max-width: 290px
+    height: 100%
+    max-height: 750px
+    overflow-x: hidden
+    position: relative
+    z-index: 12
+    background: $white
+    padding-bottom: 20px
+    @include breakpoint(m)
+        max-width: 720px
+        max-height: 420px
+        padding-bottom: 0 
+    @include breakpoint(l)
+        max-width: 945px
+        max-height: 460px    
+    &--show
+        display: block
+
+    &__container
+        @include breakpoint(m)
+            display: flex
+            justify-content: space-between
+            align-items: flex-start    
+
+    &__figure
+        order: -1
+        width: 100%
+        position: relative
+        @include breakpoint(m) 
+            width: 345px
+            height: 420px
+            overflow: hidden
+        @include breakpoint(l) 
+            width: 430px
+            height: 460px   
+        img
+           width: 100%
+           height: auto 
+           max-height: 280px 
+           @include breakpoint(m)
+               max-height: 100%
+               height: 420px
+               width: 390px
+               left: calc(50% - 195px)
+               position: absolute
+           @include breakpoint(l) 
+               width: 430px
+               height: 460px
+               left: calc(50% - 215px)     
+
+    &__body
+        padding: 0 22px
+        margin-top: 23px 
+        text-align: center
+        @include breakpoint(m)
+            width: calc(100% - 345px)
+            margin-top: 40px
+            padding: 0 30px
+        @include breakpoint(l)
+            width: calc(100% - 430px)
+            padding: 0 60px
+            text-align: left            
+
+    &__title
+        font-size: 20px
+        font-weight: 800
+        letter-spacing: .1px
+        text-align: left
+        @include breakpoint(l)
+            font-size: 23px
+            letter-spacing: .12px
+
+    &__coast
+        display: block
+        font-size: 15px
+        font-weight: 800
+        letter-spacing: .07px
+        margin-top: 13px 
+        color: $yellow
+        text-align: left
+        b
+           font-size: 19px
+           letter-spacing: .1px 
+        &--red
+            color: $red       
+
+    &__text
+        font-weight: 300
+        letter-spacing: .07px
+        line-height: 23px 
+        font-size: 14px
+        text-align: left
+        @include breakpoint(l)
+            font-size: 15px
+            line-height: 27px
+        b
+            font-weight: 800
+        &:first-of-type
+            margin-top: 18px
+            @include breakpoint(l)
+                margin-top: 26px     
+        &:not(:last-of-type)
+            margin-bottom: 18px
+            @include breakpoint(l)
+                margin-bottom: 0      
+
+    &__button
+        margin-top: 19px
+        @include breakpoint(l)
+            margin-top: 29px                  
+

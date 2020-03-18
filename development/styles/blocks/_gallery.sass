@@ -1,0 +1,66 @@
+// Helpers
+@import '../helpers/variables'
+@import '../helpers/mixins'
+
+.gallery
+    .container
+        padding: 0
+        position: relative
+        @include breakpoint(l)
+            max-width: 1280px
+
+    &__list
+        display: flex
+        flex-wrap: wrap
+        justify-content: stretch
+
+    &__item
+        width: calc(100% / 2)
+        &:nth-child(n + 5)
+            display: none
+            @media (min-width: 512px)
+                display: block
+        @media (min-width: 512px)
+            width: calc(100% / 5)
+
+    &__figure
+        img
+            max-width: 256px
+            width: 100%
+            height: auto
+
+    &__text
+        width: 250px
+        height: 80px
+        padding: 10px
+        overflow: hidden
+        background: $black2
+        box-shadow: 0 21px 21px rgba(0, 0, 0, 0.67)
+        color: $white
+        font-size: 17px
+        letter-spacing: .09px
+        position: absolute
+        left: calc(50% - 125px)
+        top: calc(50% - 40px)
+        text-align: center
+        font-weight: 700
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        @include breakpoint(l)
+            width: 303px
+            height: 100px
+            left: calc(50% - 151px)
+            top: calc(50% - 50px)
+            font-size: 19px
+        span
+            display: block
+            width: 100%
+    &__link
+        display: inline-block
+        font-size: 23px
+        letter-spacing: .12px
+        color: $yellow
+        @include breakpoint(l)
+            font-size: 26px

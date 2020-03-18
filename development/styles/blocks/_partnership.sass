@@ -1,0 +1,181 @@
+// Helpers
+@import '../helpers/variables'
+@import '../helpers/mixins'
+
+.partnership
+    display: none
+    @include breakpoint(m)
+        display: block
+        .container
+            padding: 35px $gutter
+    @include breakpoint(l)
+        .container
+            padding: 59px $gutter 75px
+
+    &__list
+        @include breakpoint(m)
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-top: 28px
+
+    &__item
+        @include breakpoint(m)
+            width: calc(100% / 3 - 20px)
+
+    &__figure
+        @include breakpoint(m)
+            position: relative
+            img
+                width: 100%
+                height: auto
+
+    &__figcaption
+        @include breakpoint(m)
+            position: absolute
+            left: 15px
+            bottom: 15px
+            right: 15px
+            color: $white
+            font-size: 15px
+            font-weight: 700
+            letter-spacing: .07px
+
+    &__text
+        @include breakpoint(m)
+            font-size: 12px
+            font-weight: 300
+            line-height: 20px
+            letter-spacing: .06px
+            padding: 15px
+        @include breakpoint(l)
+            font-size: 15px
+            line-height: 27px
+            letter-spacing: .07px
+            padding: 20px 30px
+
+.how
+    display: none
+    @include breakpoint(m)
+        display: block
+        background: #fbfbfb
+        .container
+            padding: 50px $gutter 64px
+    @include breakpoint(l)
+        .container
+            padding: 80px $gutter
+
+    &__title
+        @include breakpoint(m)
+            font-size: 22px
+            letter-spacing: .11px
+            text-align: center
+            width: 100%
+        @include breakpoint(l)
+            font-size: 25px
+            letter-spacing: .13px  
+
+    &__list
+        @include breakpoint(m)
+            display: flex
+            justify-content: space-between
+            margin-top: 30px
+            counter-reset: item
+            @include breakpoint(l)
+                margin-top: 50px
+
+    &__item
+        @include breakpoint(m)
+            width: calc(100% / 3 - 20px)
+            position: relative
+            padding-left: 50px
+            font-size: 12px
+            font-weight: 300
+            line-height: 20px
+            letter-spacing: .06px
+            &::before
+                left: 0
+                top: -5px
+                display: flex
+                align-items: center
+                justify-content: center
+                color: $white
+                position: absolute
+                content: counter(item)
+                counter-increment: item
+                background: $yellow
+                border-radius: 50%
+                width: 33px
+                height: 33px
+                font-size: 14px
+                line-height: 33px
+                font-weight: 700
+                @include breakpoint(l)
+                    width: 50px
+                    height: 50px
+                    line-height: 50px
+                    top: -13px
+        @include breakpoint(l)
+            padding-left: 85px
+            font-size: 15px            
+        strong
+            font-weight: 700
+            display: block
+            @include breakpoint(m)
+                font-size: 16px
+                margin-bottom: 10px
+            @include breakpoint(l)
+                font-size: 20px
+                margin-bottom: 20px
+
+    &__figure
+        @include breakpoint(m)
+            box-shadow: 0 28px 21px rgba(0, 0, 0, .03)
+            display: flex
+            justify-content: space-between
+            align-items: center
+            background: $white
+            margin-top: 73px
+            position: relative
+            &::after
+                @include pseudo()
+                right: 0
+                bottom: 0
+                width: 86px
+                height: 86px
+                background: url($imageDir + 'honeycomb.jpg') center / 86px 81px no-repeat
+            img
+                width: 330px
+                height: 500px
+                @include breakpoint(l)
+                    width: 523px
+                    height: 570px
+
+    &__figcaption
+        @include breakpoint(m)
+            width: calc(100% - 330px - 45px)
+            padding-right: 55px
+            @include breakpoint(l)
+                width: calc(100% - 523px - 102px)
+            strong
+                font-size: 18px
+                font-weight: 700
+                letter-spacing: .09px
+                display: block
+                margin-bottom: 17px
+                @include breakpoint(l)
+                    font-size: 20px
+                    margin-bottom: 25px
+            p
+                font-size: 13px
+                line-height: 20px
+                margin-bottom: 20px
+                @include breakpoint(l)
+                    font-size: 15px
+                    margin-bottom: 30px
+            span
+                font-size: 13px
+                font-weight: 700
+                letter-spacing: .07px
+                @include breakpoint(l)
+                    font-size: 15px

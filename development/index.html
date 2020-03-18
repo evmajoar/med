@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+        <meta name="author" content="Markup Machine">
+        <meta name="theme-color" content="#ffc725">
+
+        <meta name="description" content="Пчелкин дом">
+        <meta name="keywords" content="Пчелкин дом">
+
+        <!-- OpenGraph Meta Tags -->
+        <meta property="og:site_name" content="Пчелкин дом">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="/">
+        <meta property="og:title" content="Пчелкин дом">
+
+        <title>Пчелкин дом</title>
+
+        <link rel="stylesheet" href="styles/style.min.css">
+        <link rel="shortcut icon" href="images/icons/favicon.ico">
+    </head>
+    <body>
+
+        <!-- Main header -->    
+        <header class="main-header">
+            <div class="container">
+
+                <!--Left contacts-->
+                <p class="contacts contacts--left">
+                    г. Апшеронск ул. Репина, д. 19
+                    <a class="contacts__link contacts__link--mail" href="mailto:pchelkindom@testmail.com?subject=Консультация по меду">pchelkindom@testmail.com</a>
+                </p>
+
+                <!--LOGO-->
+                <span class="logo">
+                    <img src="images/logo.png" alt="Логотип Пчелкин дом">
+                </span>
+
+                <!--Right contacts-->
+                <p class="contacts contacts--right">
+                    <a class="contacts__link contacts__link--tel" href="tel:+89181448837">8 (918) 144 - 88 - 37</a>
+                    <button class="contacts__button link js-modal-form" type="button">Заказать звонок</button>
+                </p>
+
+                <!--Site title-->
+                <section class="price">
+                    <h2 class="price__title">Вкусный мёд оптом</h2>
+                    <p class="price__text">От 150 рублей за килограмм. Опт от 30 килограмм.</p>
+                    <a class="price__link button" href="#" download>Скачать прайс-лист</a>
+                </section>
+            </div>
+
+            <!--Mobile contacts-->
+            <div class="mobile-contacts">
+                <p class="mobile-contacts__bar container">
+                    <button class="mobile-contacts__button link" type="button">Контакты</button>
+                    <a class="mobile-contacts__link" href="tel:+89181448837">8 (918) 144 - 88 - 37</a>
+                </p>
+                <ul class="mobile-contacts__modal">
+                    <li class="mobile-contacts__item">
+                        <span>Адрес:</span>
+                        г. Апшеронск ул. Репина, д. 19
+                    </li>
+                    <li class="mobile-contacts__item">
+                        <span>Почта:</span>
+                        <a class="mobile-contacts__link" href="mailto:pchelkindom@testmail.com?subject=Консультация по меду">pchelkindom@testmail.com</a>
+                    </li>
+                    <li class="mobile-contacts__item">
+                        <button class="mobile-contacts__button link js-modal-form" type="button">Заказать звонок</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <!-- Products -->
+            <section class="products">
+                <div class="container">
+                    <h2 class="products__title title">Наша продукция</h2>
+                    <p class="products__desc desc"><b>10</b> видов вкуснейшего меда</p>
+                    <ul class="products__list">
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Каштановый мёд</h3>
+                            <figure class="products__figure">
+                                <img src="images/Нужно добавить тебе "Каштановый мёдkashtanoviy-med.jpg" alt="Каштановый мёд">
+                            </figure>
+                            <p class="products__text">От 500 руб.кг</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Гречишный мёд</h3>
+                            <figure class="products__figure">
+                                <img src="images/grechishniy-med.jpg" alt="Гречишный мёд">
+                            </figure>
+                            <p class="products__text products__text--red">Нет в наличии</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Горный мёд</h3>
+                            <figure class="products__figure">
+                                <img src="images/gorniy-med.jpg" alt="Горный мёд">
+                            </figure>
+                            <p class="products__text">От 320 руб/кг</p>
+                            <button class="products__button link js-popup-product" data-id="gorniy-med" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Майский мёд</h3>
+                            <figure class="products__figure">
+                                <img src="images/maiskiy-med.jpg" alt="Майский мёд">
+                            </figure>
+                            <p class="products__text">От 240 руб/кг</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Липовый мёд</h3>
+                            <figure class="products__figure">
+                                <img src="images/lipoviy-med.jpg" alt="Липовый мёд">
+                            </figure>
+                            <p class="products__text">От 280 руб/кг</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Мёд подсолнуха</h3>
+                            <figure class="products__figure">
+                                <img src="images/med-podsolnuha.jpg" alt="Мёд подсолнуха">
+                            </figure>
+                            <p class="products__text">От 95 руб/кг</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Акациевый мёд <strong>(желтая акация)</strong></h3>
+                            <figure class="products__figure">
+                                <img src="images/akacieviy-med.jpg" alt="Акациевый мёд (желтая акация)">
+                            </figure>
+                            <p class="products__text">От 250 руб/кг</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Акациевый мёд <strong>(белая акация)</strong></h3>
+                            <figure class="products__figure">
+                                <img src="images/akacieviy-med2.jpg" alt="Акациевый мёд (белая акация)">
+                            </figure>
+                            <p class="products__text">От 280 руб/кг</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Акациевый мёд <strong>(белая акацияс зел.)</strong></h3>
+                            <figure class="products__figure">
+                                <img src="images/akacieviy-med3.jpg" alt="Акациевый мёд (белая акацияс зеленцой)">
+                            </figure>
+                            <p class="products__text products__texе--red">Нет в наличии</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Мёд рапсовый</h3>
+                            <figure class="products__figure">
+                                <img src="images/med-rapsoviy.jpg" alt="Мёд рапсовый">
+                            </figure>
+                            <p class="products__text products__text--red">Нет в наличии</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">7 видов мёда</h3>
+                            <figure class="products__figure products__figure--thumb">
+                                <img src="images/thumb.jpg" alt="Изображение мёда отсутсвует">
+                            </figure>
+                            <p class="products__text">От 95 руб/кг</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                        <li class="products__item">
+                            <h3 class="products__subtitle">Пробники мёда</h3>
+                            <figure class="products__figure products__figure--thumb">
+                                <img src="images/thumb.jpg" alt="Изображение мёда отсутсвует">
+                            </figure>
+                            <p class="products__text">8 штук - 250 р.</p>
+                            <button class="products__button link js-popup-product" type="button">Подробнее о меде</button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- About company -->
+            <section class="about">
+                <div class="container">
+                    <h2 class="about__title title">Работать со мной одно удовольствие!</h2>
+                    <ul class="about__list">
+                        <li class="about__item about__item--icon-car">
+                            <strong>Быстрая доставка</strong>
+                            Доставка производится по всей России. Срок от 1 до 4 дней. Оператор утоняет при заказе.
+                        </li>
+                        <li class="about__item about__item--icon-lab">
+                            <strong>Качественный мёд</strong>
+                            Каждая партия меда проверяется в лаборатории. Более 5 тонн меда уже продано в 2018 году
+                        </li>
+                        <li class="about__item about__item--icon-smudge">
+                            <strong>Всегда в наличии</strong>
+                            Работаем на своей большой пасеке, а также реализуем мед доверенных пчеловодов.
+                        </li>
+                        <li class="about__item about__item--icon-certificate">
+                            <strong>Мёд сертифицирован</strong>
+                            Мед соответствует ГОСТам и имеет все нужные сертификаты для его реализации.
+                            <a class="about__link link" href="#">Сертификаты.</a>
+                        </li>
+                    </ul>
+                    <button class="about__button button button--black" type="button">Заказать первую партию</button>
+                </div>
+            </section>
+
+            <!-- Partnership -->
+            <section class="partnership">
+                <div class="container">
+                    <h2 class="partnership__title title">Отлаженные процессы сотрудничества</h2>
+                    <p class="partnership__desc desc">я сотрудничаю с разными людьми и организациями</p>
+                    <ul class="partnership__list">
+                        <li class="partnership__item">
+                            <figure class="partnership__figure">
+                                <img src="images/partnership1.jpg" alt="Торговцы меда на ярмарках">
+                                <figcaption class="partnership__figcaption">С торговцами мёда на ярмарках</figcaption>
+                            </figure>
+                            <p class="partnership__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском.</p>
+                        </li>
+                        <li class="partnership__item">
+                            <figure class="partnership__figure">
+                                <img src="images/partnership2.jpg" alt="Торговцы меда на ярмарках">
+                                <figcaption class="partnership__figcaption">С магазинами продукции пчеловодства</figcaption>
+                            </figure>
+                            <p class="partnership__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском.</p>
+                        </li>
+                        <li class="partnership__item">
+                            <figure class="partnership__figure">
+                                <img src="images/partnership3.jpg" alt="Торговцы меда на ярмарках">
+                                <figcaption class="partnership__figcaption">С кондитерскими компаниями и кафе</figcaption>
+                            </figure>
+                            <p class="partnership__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском.</p>
+                        </li>
+                    </ul>
+                </div>
+                <section class="how">
+                    <div class="container">
+                        <h3 class="how__title">Как происходит сотрудничество?</h3>
+                        <ul class="how__list">
+                            <li class="how__item">
+                                <strong>Вы оставляете заявку</strong>
+                                Мы свяжемся с вами для уточнения деталей, стоимости и объема поставки. Если вас устраивает цена и сроки, переходим ко второму этапу.
+                            </li>
+                            <li class="how__item">
+                                <strong>Мы собираем заказ</strong>
+                                Фотографируем, снимаем видео при необходимости. Выбираем транспортную компанию исходя из вашего удобства.
+                            </li>
+                            <li class="how__item">
+                                <strong>Вы получаете мёд</strong>
+                                Мы подтверждаем готовность груза к отправке, отправляем мёд вам, высылаем необходимые документы. Только потом Вы производите оплату.
+                            </li>
+                        </ul>
+                        <figure class="how__figure">
+                            <img src="images/denis-levchuk.jpg" alt="Денис Левчук">
+                            <figcaption class="how__figcaption">
+                                <strong>Здравствуйте!</strong>
+                                <p>Меня зовут Денис Левчук. Я занимаюсь пчеловодством с 2010 г.  Небольшой приветственный текст от владельца пасеки, о назначении этого сайта, о том почему он продает мед. В общем вводная часть, чтобы “очеловечить” сайт.</p>
+                                <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</p>
+                                <p>При создании генератора мы использовали небезизвестный универсальный код речей.</p>
+                                <span>Денис Левчук - пасечник из солнечного Краснодарского края</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Gallery -->
+            <section class="gallery">
+                <div class="container">
+                    <h2 class="gallery__title visually-hidden">Галлерея</h2>
+                    <ul class="gallery__list">
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo1.jpg" alt="Фото 1">
+                            </figure>
+                        </li>
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo2.jpg" alt="Фото 2">
+                            </figure>
+                        </li>
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo3.jpg" alt="Фото 3">
+                            </figure>
+                        </li>
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo4.jpg" alt="Фото 4">
+                            </figure>
+                        </li>
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo5.jpg" alt="Фото 5">
+                            </figure>
+                        </li>
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo6.jpg" alt="Фото 6">
+                            </figure>
+                        </li>
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo7.jpg" alt="Фото 7">
+                            </figure>
+                        </li>
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo8.jpg" alt="Фото 8">
+                            </figure>
+                        </li>
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo9.jpg" alt="Фото 9">
+                            </figure>
+                        </li>
+                        <li class="gallery__item">
+                            <figure class="gallery__figure">
+                                <img src="images/photo10.jpg" alt="Фото 10">
+                            </figure>
+                        </li>
+                    </ul>
+                    <p class="gallery__text"><span>Instagram:</span> <a class="gallery__link link" href="https://www.instagram.com/mrpchelkin/" rel="nofollow noopener" target="_blank">@mrpchelkin</a></p>
+                </div>
+            </section>
+
+            <!-- Feedback -->
+            <section class="feedback">
+                <div class="container">
+                    <h2 class="feedback__title title">Закажите свою первую партию!</h2>
+                    <p class="feedback__desc">Для новых заказчиков у нас особые условия – <strong>коробка пробников в подарок!</strong></p>
+                    <form class="feedback__form js-form" action="" method="">
+                        <p class="feedback__group">
+                            <label class="visually-hidden" for="name">Ваше имя</label>
+                            <input class="feedback__input" type="text" id="name" name="name" placeholder="Ваше имя">   
+                        </p>
+                        <p class="feedback__group">
+                            <label class="visually-hidden" for="tel">Ваше имя</label>
+                            <input class="feedback__input" type="tel" id="tel" name="tel" placeholder="Ваш телефон">   
+                        </p>
+                        <p class="feedback__group">
+                            <label class="visually-hidden" for="email">Ваше имя</label>
+                            <input class="feedback__input" type="email" id="email" name="email" placeholder="Ваша почта">   
+                        </p>
+                        <button class="feedback__submit button" type="submit">Заказать мёд</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Main footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <ul class="contacts contacts--footer">
+                    <li class="contacts__item">г. Апшеронск ул. Репина, д. 19</li>
+                    <li class="contacts__item"><a class="contacts__link contacts__link--icon-vr" href="viber://add?number=89181448837">Viber</a></li>
+                    <li class="contacts__item"><a class="contacts__link contacts__link--icon-wa" href="whatsapp://send?phone=+89181448837">WhatsApp</a></li>
+                    <li class="contacts__item"><a class="contacts__link contacts__link--tel" href="tel:+89181448837">8 (918) 144 - 88 - 37</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal">
+
+            <!-- Modal form -->
+            <section class="modal-form">
+                <h2 class="modal-form__title title">Скачать прайс-лист</h2>
+                <p class="modal-form__text">Заполните небольшую форму, и мы немедленно вышлем вам прайс</p>
+                <form class="modal-form__form js-form" action="" method="">
+                    <p class="modal-form__group">
+                        <label class="modal-form__label visually-hidden" for="modal-name">Ваше имя</label>
+                        <input class="modal-form__input" type="text" name="name" id="modal-name" placeholder="Ваше имя">
+                    </p>
+                    <p class="modal-form__group">
+                        <label class="modal-form__label visually-hidden" for="modal-tel">Ваш телефон</label>
+                        <input class="modal-form__input" type="tel" name="tel" id="modal-tel" placeholder="Ваш телефон">
+                    </p>
+                    <p class="modal-form__group">
+                        <label class="modal-form__label visually-hidden" for="modal-email">Ваша почта</label>
+                        <input class="modal-form__input" type="email" name="email" id="modal-email" placeholder="Ваша почта">
+                    </p>
+                    <button class="modal-form__submit button" type="submit">Скачать прайс-лист</button>                 
+                </form>
+                <button class="modal-form__close close" type="button">Закрыть</button>
+            </section>
+
+            <!-- Modal product -->
+            <div class="modal-product"></div>
+            
+            <div class="overlay"></div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="vendor/jquery-3.3.1.min.js"><\/script>')</script>
+        <script src="scripts/script.min.js"></script>
+
+    </body>
+</html>
